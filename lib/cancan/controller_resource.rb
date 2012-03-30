@@ -107,7 +107,7 @@ module CanCan
             resource_base.send(@options[:find_by], id_param)
           end
         else
-          adapter.find(resource_base, id_param)
+          adapter.find(resource_base, id_param) rescue nil
         end
       end
     end
